@@ -34,10 +34,10 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enabled = false;
 
 // Background-----------------------------------------------------------------------
-const spaceTexture = new THREE.TextureLoader().load('/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/images/space.jpg');
 scene.background = spaceTexture;
 
-const mountains = THREE.ImageUtils.loadTexture('/mountains.png');
+const mountains = THREE.ImageUtils.loadTexture('/images/mountains.png');
 mountains.wrapS = THREE.RepeatWrapping; 
 mountains.wrapT = THREE.RepeatWrapping;
 mountains.repeat.set( 1, 1); 
@@ -115,7 +115,7 @@ ico.position.x = 0;
 scene.add(ico);
 
 // Planet ----------------------------------------------------
-const planetTexture = new THREE.TextureLoader().load('/planet.png');
+const planetTexture = new THREE.TextureLoader().load('/images/planet.png');
 //const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 const planet = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -176,7 +176,7 @@ function addStars(){
   
   const flM = new THREE.PointsMaterial({
     size:6,
-    map: textureLoader.load("/snow.png"),
+    map: textureLoader.load("/images/snow.png"),
     blending: THREE.AdditiveBlending,
     depthTest: false,
     transparent: true,
